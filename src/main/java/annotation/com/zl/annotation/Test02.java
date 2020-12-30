@@ -3,11 +3,11 @@ package annotation.com.zl.annotation;
 import java.lang.annotation.*;
 
 /**
- * @Description
+ * @Description 测试元注解
  * @Author ZhengLing
  * @Date 2020/12/30 17:51
  */
-//测试元注解
+
 @MyAnnotation
 public class Test02 {
 
