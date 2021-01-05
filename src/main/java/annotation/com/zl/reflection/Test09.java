@@ -1,7 +1,5 @@
 package annotation.com.zl.reflection;
 
-import com.sun.org.apache.xalan.internal.xsltc.compiler.util.MatchGenerator;
-
 import java.lang.reflect.Constructor;
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;
@@ -14,17 +12,17 @@ import java.lang.reflect.Method;
 public class Test09 {
     public static void main(String[] args) throws Exception {
         //获得一个Class对象
-        Class c1 = Class.forName("annotation.com.zl.reflection.User");
+        Class<?> c1 = Class.forName("annotation.com.zl.reflection.User");
 
         //构造一个对象
         //调用了类的无参构造器
         User user = (User) c1.newInstance();
-//        System.out.println(user);
+        System.out.println(user);
 
         //通过构造器创建对象
-        Constructor constructor = c1.getDeclaredConstructor(String.class, int.class, int.class);
-        Object user2 = constructor.newInstance("凌志", 001, 20);
-//        System.out.println(user2);
+        Constructor<?> constructor = c1.getDeclaredConstructor(String.class, int.class, int.class);
+        Object user2 = constructor.newInstance("凌志", 1, 20);
+        System.out.println(user2);
 
         //通过反射调用普通方法
         User user3 = (User) c1.newInstance();
@@ -32,7 +30,7 @@ public class Test09 {
         Method setName = c1.getDeclaredMethod("setName", String.class);
         //invoke ： 激活
         setName.invoke(user3, "禽兽");
-//        System.out.println(user3.getName());
+        System.out.println(user3.getName());
 
         //通过反射操作属性
         User user4 = (User) c1.newInstance();
