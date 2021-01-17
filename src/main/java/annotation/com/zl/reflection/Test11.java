@@ -1,7 +1,5 @@
 package annotation.com.zl.reflection;
 
-import sun.reflect.generics.tree.ReturnType;
-
 import java.lang.reflect.Method;
 import java.lang.reflect.ParameterizedType;
 import java.lang.reflect.Type;

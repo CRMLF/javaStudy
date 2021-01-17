@@ -34,8 +34,7 @@ public class Test12 {
 }
 
 @Tableling("db_student")
-class Student2 {
-
+class Student2 { 
     @Fieldling(columnName = "db_id", type = "int", length = 10)
     private int id;
     @Fieldling(columnName = "db_age", type = "int", length = 10)
